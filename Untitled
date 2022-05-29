@@ -1,1 +1,42 @@
---nil
+local Library = loadstring(game:HttpGet"https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua")()
+
+local gui = Library:Create{
+    Name = "EastHub",
+    Size = UDim2.fromOffset(500, 350),
+    Theme = Library.Themes.Dark,
+    Link = "https:// linktr.ee/brine777"
+}
+
+local tab = gui:tab{
+    Icon = "rbxassetid://6034996695",
+    Name = "Untitled-Game"
+}
+
+tab:textbox({
+    Name = "Change FOV",
+    Description = "Change Fov positions", 
+	Default = 80,
+	Min = 0,
+	Max = 200,
+    Callback = function(bool)
+   game.Workspace.CurrentCamera.FieldOfView = bool
+end
+})
+
+tab:textbox({
+    Name = "Walkspeed",
+    Description = "makes you speed", 
+    Callback = function(bool)
+   game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = bool
+end
+})
+
+tab:textbox({
+    Name = "JumpPower",
+    Description = "makes you jump high", 
+    Callback = function(bool)
+game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = bool
+end
+})
+
+
