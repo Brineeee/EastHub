@@ -21,14 +21,14 @@ HanimeDesign.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Container.Name = "Container"
 Container.Parent = HanimeDesign
 Container.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
-Container.BorderColor3 = Color3.new(0, 0, 255)
+Container.BorderColor3 = Color3.new(255, 0, 0)
 Container.Position = UDim2.new(0.299270064, 0, 0.328075707, 0)
 Container.Size = UDim2.new(0, 452, 0, 274)
 
 Bar.Name = "Bar"
 Bar.Parent = Container
 Bar.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-Bar.BorderColor3 = Color3.new(0, 0, 255)
+Bar.BorderColor3 = Color3.new(255, 0, 0)
 Bar.Size = UDim2.new(0, 452, 0, 33)
 
 Title.Name = "Title"
@@ -174,7 +174,7 @@ local Button = Instance.new("TextButton")
 Button.Name = "Button"
 Button.Parent = Category
 Button.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-Button.BorderColor3 = Color3.new(0, 0, 255)
+Button.BorderColor3 = Color3.new(255, 0, 0)
 Button.Size = UDim2.new(0, 200, 0, 50)
 Button.Font = Enum.Font.ArialBold
 Button.TextColor3 = Color3.new(0.921569, 0.921569, 0.921569)
