@@ -37,7 +37,7 @@ Title.BackgroundColor3 = Color3.new(1, 1, 1)
 Title.BackgroundTransparency = 1
 Title.Size = UDim2.new(0, 124, 0, 33)
 Title.Font = Enum.Font.ArialBold
-Title.Text = " Jioa Hub"
+Title.Text = " East Hub - Made by mech#0945"
 Title.TextColor3 = Color3.new(0.921569, 0.921569, 0.921569)
 Title.TextSize = 15
 Title.TextWrapped = true
@@ -59,7 +59,7 @@ Mini.BackgroundTransparency = 1
 Mini.BorderSizePixel = 0
 Mini.Position = UDim2.new(0.882743418, 0, 0.0909090936, 0)
 Mini.Size = UDim2.new(0, 27, 0, 27)
-Mini.Image = "" 
+Mini.Image = "rbxthumb://type=Asset&id=5107141188&w=150&h=150" 
 
 Categories.Name = "Categories"
 Categories.Parent = Container
