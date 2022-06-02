@@ -1,0 +1,452 @@
+ local Library = {}
+
+function Library:Create(name,logotext)
+	if game.CoreGui:FindFirstChild("Skid") then
+	game.CoreGui:FindFirstChild("Skid"):Destroy()	
+	end
+	local Skid = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local SideBar = Instance.new("Frame")
+	
+	local UICornerSidebar = Instance.new("UICorner")	
+	local MainUICorner = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+	local Icon = Instance.new("Frame")
+	local IconUICorner = Instance.new("UICorner")
+	local IconText = Instance.new("TextLabel")
+	local PlayerInfo = Instance.new("Frame")
+	local PlayerUICorner = Instance.new("UICorner")
+	local PlayerTextLabel = Instance.new("TextLabel")
+	local PlayerImageLabel = Instance.new("ImageLabel")
+	local PlayerImageUICorner = Instance.new("UICorner")
+	local Exit = Instance.new("TextButton")
+	local ExitUICorner = Instance.new("UICorner")
+	local TabSection = Instance.new("Frame")
+	local ScrollTabFrame = Instance.new("ScrollingFrame")
+	local ScrollTabUIGridLayout = Instance.new("UIGridLayout")
+	local Shadow = Instance.new("ImageLabel")
+	local Containers = Instance.new("Folder")
+	
+	Skid.Name = "Skid"
+	Skid.Parent = game.CoreGui
+
+	Main.Name = "Main"
+	Main.Parent = Skid
+	Main.BackgroundColor3 = Color3.fromRGB(37, 36, 44)
+	Main.Position = UDim2.new(0.30826506, 0, 0.25398773, 0)
+	Main.Size = UDim2.new(0, 532, 0, 401)
+
+	SideBar.Name = "SideBar"
+	SideBar.Parent = Main
+	SideBar.BackgroundColor3 = Color3.fromRGB(48, 46, 57)
+	SideBar.Size = UDim2.new(0, 177, 0, 401)
+
+	UICornerSidebar.CornerRadius = UDim.new(0.0299999993, 1)
+	UICornerSidebar.Name = "UICornerSidebar"
+	UICornerSidebar.Parent = SideBar
+
+	Title.Name = "Title"
+	Title.Parent = SideBar
+	Title.BackgroundColor3 = Color3.fromRGB(176, 211, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0.196735784, 0, 0.0149625931, 0)
+	Title.Size = UDim2.new(0, 142, 0, 28)
+	Title.Font = Enum.Font.Gotham
+	Title.Text = name
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextSize = 15.000
+	Title.TextTransparency = 0.200
+
+	Icon.Name = "Icon"
+	Icon.Parent = SideBar
+	Icon.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+	Icon.Position = UDim2.new(0.0430703349, 0, 0.0149625931, 0)
+	Icon.Size = UDim2.new(0, 28, 0, 28)
+
+	IconUICorner.CornerRadius = UDim.new(0.100000001, 1)
+	IconUICorner.Name = "IconUICorner"
+	IconUICorner.Parent = Icon
+
+	IconText.Name = "IconText"
+	IconText.Parent = Icon
+	IconText.BackgroundColor3 = Color3.fromRGB(176, 211, 255)
+	IconText.BackgroundTransparency = 1.000
+	IconText.Position = UDim2.new(0, 0, 0.0149623323, 0)
+	IconText.Size = UDim2.new(0, 28, 0, 28)
+	IconText.Font = Enum.Font.Gotham
+	IconText.Text = logotext
+	IconText.TextColor3 = Color3.fromRGB(255, 255, 255)
+	IconText.TextSize = 15.000
+	IconText.TextTransparency = 0.200
+	
+
+
+	PlayerInfo.Name = "PlayerInfo"
+	PlayerInfo.Parent = SideBar
+	PlayerInfo.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+	PlayerInfo.Position = UDim2.new(0.0430703014, 0, 0.912718177, 0)
+	PlayerInfo.Size = UDim2.new(0, 163, 0, 29)
+
+	PlayerUICorner.CornerRadius = UDim.new(0.100000001, 1)
+	PlayerUICorner.Name = "PlayerUICorner"
+	PlayerUICorner.Parent = PlayerInfo
+
+	PlayerTextLabel.Name = "PlayerTextLabel"
+	PlayerTextLabel.Parent = PlayerInfo
+	PlayerTextLabel.BackgroundColor3 = Color3.fromRGB(176, 211, 255)
+	PlayerTextLabel.BackgroundTransparency = 1.000
+	PlayerTextLabel.Position = UDim2.new(0.0375000015, 0, 0.0294126309, 0)
+	PlayerTextLabel.Size = UDim2.new(0, 126, 0, 28)
+	PlayerTextLabel.Font = Enum.Font.Gotham
+	PlayerTextLabel.Text = "Hello,"
+	PlayerTextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	PlayerTextLabel.TextSize = 14.000
+	PlayerTextLabel.TextTransparency = 0.200
+	PlayerTextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+	PlayerImageLabel.Name = "PlayerImageLabel"
+	PlayerImageLabel.Parent = PlayerInfo
+	PlayerImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	PlayerImageLabel.BackgroundTransparency = 1.000
+	PlayerImageLabel.BorderSizePixel = 0
+	PlayerImageLabel.Position = UDim2.new(0.831754446, 0, -0.00507012708, 0)
+	PlayerImageLabel.Size = UDim2.new(0, 28, 0, 28)
+	PlayerImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+	PlayerImageUICorner.CornerRadius = UDim.new(1, 1)
+	PlayerImageUICorner.Name = "PlayerImageUICorner"
+	PlayerImageUICorner.Parent = PlayerImageLabel
+
+	Exit.Name = "Exit"
+	Exit.Parent = SideBar
+	Exit.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+	Exit.Position = UDim2.new(0.0429999568, 0, 0.83048135, 0)
+	Exit.Size = UDim2.new(0, 163, 0, 28)
+	Exit.Font = Enum.Font.Gotham
+	Exit.Text = "Close GUI"
+	Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Exit.TextSize = 14.000
+	Exit.TextTransparency = 0.200
+	Exit.MouseButton1Down:Connect(function()
+		ProjectTerminate:Destroy()
+	end)
+
+	ExitUICorner.CornerRadius = UDim.new(0.100000001, 1)
+	ExitUICorner.Name = "ExitUICorner"
+	ExitUICorner.Parent = Exit
+	
+	
+	TabSection.Name = "TabSection"
+	TabSection.Parent = SideBar
+	TabSection.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+	TabSection.BorderSizePixel = 0
+	TabSection.Position = UDim2.new(0.0430703014, 0, 0.102244392, 0)
+	TabSection.Size = UDim2.new(0, 163, 0, 286)
+
+	ScrollTabFrame.Name = "ScrollTabFrame"
+	ScrollTabFrame.Parent = TabSection
+	ScrollTabFrame.Active = true
+	ScrollTabFrame.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+	ScrollTabFrame.BackgroundTransparency = 1.000
+	ScrollTabFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	ScrollTabFrame.BorderSizePixel = 0
+	ScrollTabFrame.Position = UDim2.new(0.0374999233, 0, 0.0231480692, 0)
+	ScrollTabFrame.Size = UDim2.new(0, 149, 0, 269)
+	ScrollTabFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+	ScrollTabFrame.ScrollBarThickness = 0
+	ScrollTabUIGridLayout.Name = "ScrollTabUIGridLayout"
+	ScrollTabUIGridLayout.Parent = ScrollTabFrame
+	ScrollTabUIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	ScrollTabUIGridLayout.CellSize = UDim2.new(0, 150, 0, 25)
+	
+	MainUICorner.CornerRadius = UDim.new(0.00999999978, 1)
+	MainUICorner.Name = "MainUICorner"
+	MainUICorner.Parent = Main
+
+	Shadow.Name = "Shadow"
+	Shadow.Parent = Main
+	Shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Shadow.BackgroundTransparency = 1.000
+	Shadow.Position = UDim2.new(-0.0545112789, 0, -0.054862842, 0)
+	Shadow.Size = UDim2.new(0, 590, 0, 444)
+	Shadow.ZIndex = -1
+	Shadow.Image = "rbxassetid://5554236805"
+	Shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+	Containers.Name = "Containers"
+	Containers.Parent = Main
+	
+	-- Scripts:
+
+	local function HMWYUN_fake_script() -- PlayerTextLabel.GetPlayerName 
+		local script = Instance.new('LocalScript', PlayerTextLabel)
+
+		script.Parent.Text = "Hello, ".. game.Players.LocalPlayer.Name
+	end
+	coroutine.wrap(HMWYUN_fake_script)()
+	local function SBLY_fake_script() -- PlayerImageLabel.GetPlayerIcon 
+		local script = Instance.new('LocalScript', PlayerImageLabel)
+
+		local Players = game:GetService("Players")
+		local player = Players.LocalPlayer
+
+		local userId = player.UserId
+		local thumbType = Enum.ThumbnailType.HeadShot
+		local thumbSize = Enum.ThumbnailSize.Size420x420
+		local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+
+		script.Parent.Image = content
+	end
+	coroutine.wrap(SBLY_fake_script)()
+	local function GBXSQW_fake_script() -- Main.Drag 
+		local script = Instance.new('LocalScript', Main)
+
+		pcall(function()
+			function dragify(Frame)
+				dragToggle = nil
+				dragSpeed = .25 -- You can edit this.
+				dragInput = nil
+				dragStart = nil
+				dragPos = nil
+
+				function updateInput(input)
+					Delta = input.Position - dragStart
+					Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+					game:GetService("TweenService"):Create(Frame, TweenInfo.new(.25), {Position = Position}):Play()
+				end
+
+				Frame.InputBegan:Connect(function(input)
+					if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+						dragToggle = true
+						dragStart = input.Position
+						startPos = Frame.Position
+						input.Changed:Connect(function()
+							if (input.UserInputState == Enum.UserInputState.End) then
+								dragToggle = false
+							end
+						end)
+					end
+				end)
+
+				Frame.InputChanged:Connect(function(input)
+					if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+						dragInput = input
+					end
+				end)
+
+				game:GetService("UserInputService").InputChanged:Connect(function(input)
+					if (input == dragInput and dragToggle) then
+						updateInput(input)
+					end
+				end)
+			end
+		end)
+		dragify(script.Parent)
+	end
+	coroutine.wrap(GBXSQW_fake_script)()
+
+	local Library2 = {}
+
+	function Library2:MakeTab(text)
+		local TabButton = Instance.new("TextButton")
+		local TabButtonUICorner = Instance.new("UICorner")
+		local TabSectionUICorner = Instance.new("UICorner")
+		
+		local Tab = Instance.new("ScrollingFrame")
+		local UIListLayoutTab = Instance.new("UIListLayout")
+		
+		TabButton.Name = "TabButton"
+		TabButton.Parent = ScrollTabFrame
+		TabButton.BackgroundColor3 = Color3.fromRGB(74, 71, 89)
+		TabButton.Size = UDim2.new(0, 142, 0, 69)
+		TabButton.Font = Enum.Font.Gotham
+		TabButton.Text = text
+		TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TabButton.TextSize = 14.000
+		TabButton.TextTransparency = 0.200
+
+		TabButtonUICorner.CornerRadius = UDim.new(0.150000006, 1)
+		TabButtonUICorner.Name = "TabButtonUICorner"
+		TabButtonUICorner.Parent = TabButton
+
+		TabSectionUICorner.CornerRadius = UDim.new(0.0199999996, 1)
+		TabSectionUICorner.Name = "TabSectionUICorner"
+		TabSectionUICorner.Parent = TabSection
+		
+		Tab.Name = "Tab"..text
+		Tab.Parent = Containers
+		Tab.Active = true
+		Tab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Tab.BackgroundTransparency = 1.000
+		Tab.BorderSizePixel = 0
+		Tab.Position = UDim2.new(0.345864654, 0, 0.0149625931, 0)
+		Tab.Size = UDim2.new(0, 341, 0, 389)
+		Tab.ScrollBarThickness = 5
+
+		UIListLayoutTab.Name = "UIListLayoutTab"
+		UIListLayoutTab.Parent = Tab
+		UIListLayoutTab.SortOrder = Enum.SortOrder.LayoutOrder
+		UIListLayoutTab.Padding = UDim.new(0, 5)
+		
+		TabButton.MouseButton1Click:Connect(function()
+			for i,v in next, Containers:GetChildren() do
+				v.Visible = false
+			end
+			Tab.Visible = true
+		end)
+		local Library2 = {}
+		function Library2:Label(text)
+			local Label = Instance.new("Frame")
+			local LabelUICorner = Instance.new("UICorner")
+			local LabelLabel = Instance.new("TextLabel")
+			local LabelImage = Instance.new("ImageLabel")
+
+			Label.Name = "Label"
+			Label.Parent = Tab
+			Label.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+			Label.Size = UDim2.new(0, 328, 0, 29)
+
+			LabelUICorner.CornerRadius = UDim.new(0.100000001, 1)
+			LabelUICorner.Name = "LabelUICorner"
+			LabelUICorner.Parent = Label
+
+			LabelLabel.Name = "LabelLabel"
+			LabelLabel.Parent = Label
+			LabelLabel.BackgroundColor3 = Color3.fromRGB(176, 211, 255)
+			LabelLabel.BackgroundTransparency = 1.000
+			LabelLabel.Position = UDim2.new(0.0253048409, 0, 0.0294126309, 0)
+			LabelLabel.Size = UDim2.new(0, 290, 0, 28)
+			LabelLabel.Font = Enum.Font.Gotham
+			LabelLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			LabelLabel.TextSize = 14.000
+			LabelLabel.Text = text
+			LabelLabel.TextTransparency = 0.200
+			LabelLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+			LabelImage.Name = "LabelImage"
+			LabelImage.Parent = Label
+			LabelImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			LabelImage.BackgroundTransparency = 1.000
+			LabelImage.Position = UDim2.new(0.923780501, 0, 0.103448272, 0)
+			LabelImage.Size = UDim2.new(0, 22, 0, 22)
+			LabelImage.Image = "http://www.roblox.com/asset/?id=6031082525"
+		end
+		
+		function Library2:Button(text,callback)
+			local Button = Instance.new("TextButton")
+			local ButtonUICorner = Instance.new("UICorner")
+			local ButtonLabel = Instance.new("TextLabel")
+			local ButtonImage = Instance.new("ImageLabel")
+			Button.Name = "Button"
+			Button.Parent = Tab
+			Button.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+			Button.Position = UDim2.new(0, 0, 0.0874035954, 0)
+			Button.Size = UDim2.new(0, 328, 0, 29)
+			Button.Font = Enum.Font.SourceSans
+			Button.Text = ""
+			Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+			Button.TextSize = 14.000
+
+			ButtonUICorner.CornerRadius = UDim.new(0.100000001, 1)
+			ButtonUICorner.Name = "ButtonUICorner"
+			ButtonUICorner.Parent = Button
+
+			ButtonLabel.Name = "ButtonLabel"
+			ButtonLabel.Parent = Button
+			ButtonLabel.BackgroundColor3 = Color3.fromRGB(176, 211, 255)
+			ButtonLabel.BackgroundTransparency = 1.000
+			ButtonLabel.Position = UDim2.new(0.0253048409, 0, 0.0294126309, 0)
+			ButtonLabel.Size = UDim2.new(0, 290, 0, 28)
+			ButtonLabel.Font = Enum.Font.Gotham
+			ButtonLabel.Text = text
+			ButtonLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			ButtonLabel.TextSize = 14.000
+			ButtonLabel.TextTransparency = 0.200
+			ButtonLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+			ButtonImage.Name = "ButtonImage"
+			ButtonImage.Parent = Button
+			ButtonImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			ButtonImage.BackgroundTransparency = 1.000
+			ButtonImage.Position = UDim2.new(0.923780501, 0, 0.103448272, 0)
+			ButtonImage.Size = UDim2.new(0, 22, 0, 22)
+			ButtonImage.Image = "http://www.roblox.com/asset/?id=6031229361"
+			Button.MouseButton1Click:Connect(callback)
+		end
+		function Library2:Line()
+			local Line = Instance.new("Frame")
+			Line.Name = "Line"
+			Line.Parent = Tab
+			Line.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+			Line.Position = UDim2.new(0, 0, 0.174807191, 0)
+			Line.Size = UDim2.new(0, 328, 0, 3)
+
+		end
+		function Library2:Toggle(text,callback)
+			local state = false
+			local Toggle = Instance.new("TextButton")
+			local ToggleUICorner = Instance.new("UICorner")
+			local ToggleLabel = Instance.new("TextLabel")
+			local ToggleImage = Instance.new("ImageLabel")
+			local ToggleCallback = Instance.new("ImageLabel")
+
+			Toggle.Name = "Toggle"
+			Toggle.Parent = Tab
+			Toggle.BackgroundColor3 = Color3.fromRGB(102, 98, 122)
+			Toggle.Position = UDim2.new(0, 0, 0.0874035954, 0)
+			Toggle.Size = UDim2.new(0, 328, 0, 29)
+			Toggle.Font = Enum.Font.SourceSans
+			Toggle.Text = ""
+			Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+			Toggle.TextSize = 14.000
+
+			ToggleUICorner.CornerRadius = UDim.new(0.100000001, 1)
+			ToggleUICorner.Name = "ToggleUICorner"
+			ToggleUICorner.Parent = Toggle
+
+			ToggleLabel.Name = "ToggleLabel"
+			ToggleLabel.Parent = Toggle
+			ToggleLabel.BackgroundColor3 = Color3.fromRGB(176, 211, 255)
+			ToggleLabel.BackgroundTransparency = 1.000
+			ToggleLabel.Position = UDim2.new(0.0253048409, 0, 0.0294126309, 0)
+			ToggleLabel.Size = UDim2.new(0, 290, 0, 28)
+			ToggleLabel.Font = Enum.Font.Gotham
+			ToggleLabel.Text = text
+			ToggleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			ToggleLabel.TextSize = 14.000
+			ToggleLabel.TextTransparency = 0.200
+			ToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+			ToggleImage.Name = "ToggleImage"
+			ToggleImage.Parent = Toggle
+			ToggleImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			ToggleImage.BackgroundTransparency = 1.000
+			ToggleImage.Position = UDim2.new(0.923780501, 0, 0.103448272, 0)
+			ToggleImage.Size = UDim2.new(0, 22, 0, 22)
+			ToggleImage.Image = "http://www.roblox.com/asset/?id=6031104651"
+
+			ToggleCallback.Name = "ToggleCallback"
+			ToggleCallback.Parent = Toggle
+			ToggleCallback.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			ToggleCallback.BackgroundTransparency = 1.000
+			ToggleCallback.Position = UDim2.new(0.841463447, 0, 0.103448272, 0)
+			ToggleCallback.Size = UDim2.new(0, 22, 0, 22)
+			ToggleCallback.Image = "http://www.roblox.com/asset/?id=6031068433"
+			Toggle.MouseButton1Click:Connect(function()
+				state = not state
+				callback(state)
+				if state then
+					ToggleCallback.Image = "rbxassetid://6031068426"
+				else
+					ToggleCallback.Image = "rbxassetid://6031068433"
+				end
+			end)
+
+		end
+		
+		return Library2
+	end
+	
+	return Library2
+end
+return Library 
