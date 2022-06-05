@@ -1,6 +1,6 @@
 local Golden = {}
 
-function Golden:Create(title)
+function Golden:Create(name)
 local LibraryUI = Instance.new("ScreenGui")
 local Container = Instance.new("Frame")
 local Bar = Instance.new("Frame")
@@ -37,7 +37,7 @@ Title.BackgroundColor3 = Color3.new(1, 1, 1)
 Title.BackgroundTransparency = 1
 Title.Size = UDim2.new(0, 124, 0, 33)
 Title.Font = Enum.Font.ArialBold
-Title.Text = " East Hub - Made by mech#0945"
+Title.Text = name
 Title.TextColor3 = Color3.new(0.921569, 0.921569, 0.921569)
 Title.TextSize = 15
 Title.TextWrapped = true
