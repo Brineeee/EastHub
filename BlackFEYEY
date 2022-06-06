@@ -478,7 +478,7 @@ function Blacklib:Window(gametitle)
         NotificationTitle.ZIndex = 3
         NotificationTitle.Font = Enum.Font.Code
         NotificationTitle.Text = titledesc or "Notification"
-        NotificationTitle.TextColor3 = Color3.fromRGB(255, 0, 0)
+        NotificationTitle.TextColor3 = Color3.fromRGB(0, 0, 255)
         NotificationTitle.TextSize = 22.000
         
         Line.Name = "Line"
