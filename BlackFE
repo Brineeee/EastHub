@@ -169,7 +169,7 @@ function Blacklib:Window(gametitle)
     CloseImage.Size = UDim2.new(0, 0, 0, 0)
     CloseImage.Position = UDim2.new(0, -370, 0, 170)
     CloseImage.Image = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"
-    CloseImage.ImageColor3 = Color3.fromRGB(150, 30, 30)
+    CloseImage.ImageColor3 = Color3.fromRGB(0, 0, 255)
     
     ServerTime.Name = "ServerTime"
     ServerTime.Parent = WindowFrame
@@ -181,7 +181,7 @@ function Blacklib:Window(gametitle)
     ServerTime.Font = Enum.Font.Code
     ServerTime.Text = ""
     ServerTime.TextSize = 15.000
-    ServerTime.TextColor3 = Color3.fromRGB(200, 200, 200)
+    ServerTime.TextColor3 = Color3.fromRGB(0, 0, 255)
     ServerTime.TextXAlignment = Enum.TextXAlignment.Center
     
     ServerDate.Name = "ServerDate"
@@ -194,7 +194,7 @@ function Blacklib:Window(gametitle)
     ServerDate.Font = Enum.Font.Code
     ServerDate.Text = ""
     ServerDate.TextSize = 15.000
-    ServerDate.TextColor3 = Color3.fromRGB(200, 200, 200)
+    ServerDate.TextColor3 = Color3.fromRGB(0, 0, 255)
     ServerDate.TextXAlignment = Enum.TextXAlignment.Center
     
     PlaLab.Name = "PlaLab"
@@ -204,9 +204,9 @@ function Blacklib:Window(gametitle)
     PlaLab.Position = UDim2.new(0, 3, 0, 353)
     PlaLab.Size = UDim2.new(0, 150, 0, 25)
     PlaLab.Font = Enum.Font.Code
-    PlaLab.Text = "User : " .. NameID
+    PlaLab.Text = "Hi : " .. NameID
     PlaLab.TextSize = 13.000
-    PlaLab.TextColor3 = Color3.fromRGB(255, 0, 0)
+    PlaLab.TextColor3 = Color3.fromRGB(0, 0, 255)
     PlaLab.TextXAlignment = Enum.TextXAlignment.Center
     PlaLab.TextScaled = true
     PlaLab.TextWrapped = true
