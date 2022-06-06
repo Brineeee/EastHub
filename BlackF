@@ -98,7 +98,7 @@ function Blacklib:Window(gametitle)
     BlackImage.BackgroundTransparency = 1.000
     BlackImage.Position = UDim2.new(0, 5, 0, 7)
     BlackImage.Size = UDim2.new(0, 25, 0, 25)
-    BlackImage.Image = "rbxassetid://8666601749"
+    BlackImage.Image = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"
     BlackImage.ImageColor3 = Color3.fromRGB(200, 200, 200)
     
     BlackTitle.Name = "BlackTitle"
@@ -168,7 +168,7 @@ function Blacklib:Window(gametitle)
     CloseImage.BackgroundTransparency = 1.000
     CloseImage.Size = UDim2.new(0, 0, 0, 0)
     CloseImage.Position = UDim2.new(0, -370, 0, 170)
-    CloseImage.Image = "rbxassetid://8666601749"
+    CloseImage.Image = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"
     CloseImage.ImageColor3 = Color3.fromRGB(150, 30, 30)
     
     ServerTime.Name = "ServerTime"
@@ -388,7 +388,7 @@ function Blacklib:Window(gametitle)
     end)
     spawn(function()
         while task.wait() do
-            titlefunc:Refresh("") wait(.2) titlefunc:Refresh("B") wait(.2) titlefunc:Refresh("Bl") wait(.2) titlefunc:Refresh("Bla") wait(.2) titlefunc:Refresh("Blac") wait(.2) titlefunc:Refresh("Black") wait(.2) titlefunc:Refresh("BlackT") wait(.2) titlefunc:Refresh("BlackTr") wait(.2) titlefunc:Refresh("BlackTra") wait(.2) titlefunc:Refresh("BlackTrap") wait(.9) titlefunc:Refresh("BlackTra") wait(.2) titlefunc:Refresh("BlackTr") wait(.2) titlefunc:Refresh("BlackT") wait(.2) titlefunc:Refresh("Black") wait(.2) titlefunc:Refresh("Blac") wait(.2) titlefunc:Refresh("Bla") wait(.2) titlefunc:Refresh("Bl") wait(.2) titlefunc:Refresh("B") wait(.2) titlefunc:Refresh("") wait(.2) wait(.3)
+            titlefunc:Refresh("") wait(.2) titlefunc:Refresh("E") wait(.2) titlefunc:Refresh("Ea") wait(.2) titlefunc:Refresh("Eas") wait(.2) titlefunc:Refresh("East") wait(.2) titlefunc:Refresh("EastX") wait(.2) titlefunc:Refresh("EastXH") wait(.2) titlefunc:Refresh("EastXHu") wait(.2) titlefunc:Refresh("EastXHub") wait(.2) titlefunc:Refresh("EastXHu") wait(.9) titlefunc:Refresh("EastXH") wait(.2) titlefunc:Refresh("EastX") wait(.2) titlefunc:Refresh("East") wait(.2) titlefunc:Refresh("Eas") wait(.2) titlefunc:Refresh("Ea") wait(.2) titlefunc:Refresh("E") wait(.2) titlefunc:Refresh(" ") wait(.2) titlefunc:Refresh(" ") wait(.2) titlefunc:Refresh("") wait(.2) wait(.3)
         end
     end)
     -- End Windows --
@@ -567,7 +567,7 @@ function Blacklib:Window(gametitle)
         TabImage.BackgroundTransparency = 1.000
         TabImage.Position = UDim2.new(0, 3, 0, 4)
         TabImage.Size = UDim2.new(0, 20, 0, 20)
-        TabImage.Image = img or "rbxassetid://8666601749"
+        TabImage.Image = img or "rbxthumb://type=Asset&id=5107182114&w=150&h=150"
         TabImage.ImageColor3 = _G.TabImageColor
         
         TabTitle.Name = tabtitle or "TabTitle"
