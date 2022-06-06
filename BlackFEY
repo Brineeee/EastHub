@@ -121,7 +121,7 @@ function Blacklib:Window(gametitle)
     Space.Size = UDim2.new(0, 10, 0, 25)
     Space.Font = Enum.Font.GothamBold
     Space.Text = "|"
-    Space.TextColor3 = Color3.fromRGB(150, 0, 0)
+    Space.TextColor3 = Color3.fromRGB(0, 0, 255)
     Space.TextSize = 18.000
     
     GameTitle.Name = gametitle or "GameTitle"
@@ -144,7 +144,7 @@ function Blacklib:Window(gametitle)
     MinButton.Position = UDim2.new(0, 535, 0, 7)
     MinButton.Size = UDim2.new(0, 25, 0, 25)
     MinButton.Font = Enum.Font.GothamSemibold
-    MinButton.TextColor3 = Color3.fromRGB(150, 150, 150)
+    MinButton.TextColor3 = Color3.fromRGB(0, 0, 255)
     MinButton.Text = "-"
     MinButton.TextSize = 35.000
     
@@ -156,7 +156,7 @@ function Blacklib:Window(gametitle)
     CloseButton.Position = UDim2.new(0, 560, 0, 7)
     CloseButton.Size = UDim2.new(0, 25, 0, 25)
     CloseButton.Font = Enum.Font.GothamSemibold
-    CloseButton.TextColor3 = Color3.fromRGB(150, 0, 0)
+    CloseButton.TextColor3 = Color3.fromRGB(0, 0, 255)
     CloseButton.Text = "×"
     CloseButton.TextSize = 30.000
     
@@ -204,7 +204,7 @@ function Blacklib:Window(gametitle)
     PlaLab.Position = UDim2.new(0, 3, 0, 353)
     PlaLab.Size = UDim2.new(0, 150, 0, 25)
     PlaLab.Font = Enum.Font.Code
-    PlaLab.Text = "Hi : " .. NameID
+    PlaLab.Text = "Thanks for using EastXHub"
     PlaLab.TextSize = 13.000
     PlaLab.TextColor3 = Color3.fromRGB(0, 0, 255)
     PlaLab.TextXAlignment = Enum.TextXAlignment.Center
@@ -722,8 +722,8 @@ function Blacklib:Window(gametitle)
                     sectionFrame:TweenSize(UDim2.new(0, 405, 0, sectionListLayout.AbsoluteContentSize.Y + 8), "In", "Linear", 0.10)
                     game.TweenService:Create(closeSection, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Rotation = 0}):Play()
                     game.TweenService:Create(closeSection, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextColor3 = Color3.fromRGB(200, 12, 12)}):Play()
-                    game.TweenService:Create(sectionCircle, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundColor3 = Color3.fromRGB(200, 12, 12)}):Play()
-                    game.TweenService:Create(TextLabel, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextColor3 = Color3.fromRGB(200, 12, 12)}):Play()
+                    game.TweenService:Create(sectionCircle, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundColor3 = Color3.fromRGB(0, 0, 255)}):Play()
+                    game.TweenService:Create(TextLabel, TweenInfo.new(0.10, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextColor3 = Color3.fromRGB(0, 0, 255)}):Play()
                     wait(0.10)
                     UpdateSize()
                 end
