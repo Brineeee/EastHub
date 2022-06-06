@@ -170,7 +170,7 @@ function Blacklib:Window()
     CloseButton.Position = UDim2.new(0, 525, 0, 3)
     CloseButton.Size = UDim2.new(0, 25, 0, 25)
     CloseButton.Font = Enum.Font.Gotham
-    CloseButton.TextColor3 = Color3.fromRGB(0, 200, 0)
+    CloseButton.TextColor3 = Color3.fromRGB(0, 0, 255)
     CloseButton.Text = "×"
     CloseButton.Rotation = 0
     CloseButton.TextSize = 25.000
@@ -873,7 +873,7 @@ function Blacklib:Window()
                 if default == true then
                     ImageButton.ImageRectOffset = Vector2.new(4, 836)
                     game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                        {ImageColor3 = Color3.fromRGB(0,255,0)}
+                        {ImageColor3 = Color3.fromRGB(0,0,255)}
                         ):Play()
                     toggle = not toggle
                     pcall(callback, toggle)
@@ -882,7 +882,7 @@ function Blacklib:Window()
                 ImageButton.MouseButton1Click:Connect(function()
                     if toggle == false then
                         game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                            {ImageColor3 = Color3.fromRGB(0,255,0)}
+                            {ImageColor3 = Color3.fromRGB(0,0,255)}
                             ):Play()
                         ImageButton.ImageRectOffset = Vector2.new(4, 836)
                     else
@@ -1860,7 +1860,7 @@ function Blacklib:Window()
                 
                 Frame2.Name = "Line"
                 Frame2.Parent = sectionFrame
-                Frame2.BackgroundColor3 = Color3.fromRGB(200,200,200)
+                Frame2.BackgroundColor3 = Color3.fromRGB(0,0,255)
                 Frame2.BorderSizePixel = 0
                 Frame2.Position = UDim2.new(0, 8, 0, 1)
                 Frame2.Size = UDim2.new(0, 371, 0, 1)
