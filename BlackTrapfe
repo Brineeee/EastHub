@@ -343,7 +343,7 @@ function Blacklib:Window()
     end)
     spawn(function()
         while task.wait() do
-            titlefunc:Refresh("") wait(.2) titlefunc:Refresh("E") wait(.2) titlefunc:Refresh("Ea") wait(.2) titlefunc:Refresh("Eas") wait(.2) titlefunc:Refresh("East") wait(.2) titlefunc:Refresh("EastH") wait(.2) titlefunc:Refresh("EastHu") wait(.2) titlefunc:Refresh("EastHub") wait(.2) titlefunc:Refresh("EastHub") wait(.2) titlefunc:Refresh("EastHu") wait(.9) titlefunc:Refresh("EastH") wait(.2) titlefunc:Refresh("East") wait(.2) titlefunc:Refresh("Eas") wait(.2) titlefunc:Refresh("Ea") wait(.2) titlefunc:Refresh("E") wait(.2) titlefunc:Refresh(" ") wait(.2) titlefunc:Refresh("Bl") wait(.2) titlefunc:Refresh("") wait(.2) titlefunc:Refresh("") wait(.2) wait(.3)
+            titlefunc:Refresh("") wait(.2) titlefunc:Refresh("E") wait(.2) titlefunc:Refresh("Ea") wait(.2) titlefunc:Refresh("Eas") wait(.2) titlefunc:Refresh("East") wait(.2) titlefunc:Refresh("EastH") wait(.2) titlefunc:Refresh("EastHu") wait(.2) titlefunc:Refresh("EastHub") wait(.2) titlefunc:Refresh("EastHub") wait(.2) titlefunc:Refresh("EastHu") wait(.9) titlefunc:Refresh("EastH") wait(.2) titlefunc:Refresh("East") wait(.2) titlefunc:Refresh("Eas") wait(.2) titlefunc:Refresh("Ea") wait(.2) titlefunc:Refresh("E") wait(.2) titlefunc:Refresh(" ") wait(.2) titlefunc:Refresh("") wait(.2) titlefunc:Refresh("") wait(.2) titlefunc:Refresh("") wait(.2) wait(.3)
         end
     end)
     -- End Windows --
