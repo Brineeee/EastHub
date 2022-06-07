@@ -749,12 +749,12 @@ function Blacklib:Window()
                     if callBackDebounce then
                         mouseleft = false
                         game.TweenService:Create(UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{
-                            Color = Color3.fromRGB(70,70,70)
+                            Color = Color3.fromRGB(0,0,150)
                         }):Play()
                     else
                         mouseleft = false
                         game.TweenService:Create(UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{
-                            Color = Color3.fromRGB(90,90,90)
+                            Color = Color3.fromRGB(0,0,200)
                         }):Play()
                     end
                 end)
@@ -766,7 +766,7 @@ function Blacklib:Window()
                             TextSize = 12
                         }):Play()
                         game.TweenService:Create(UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{
-                            Color = Color3.fromRGB(180,180,180)
+                            Color = Color3.fromRGB(0,0,255)
                         }):Play()
                     else
                         mouseleft = true
@@ -775,7 +775,7 @@ function Blacklib:Window()
                             TextSize = 12
                         }):Play()
                         game.TweenService:Create(UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{
-                            Color = Color3.fromRGB(180,180,180)
+                            Color = Color3.fromRGB(0,0,255)
                         }):Play()
                     end
                 end)
@@ -1064,7 +1064,7 @@ function Blacklib:Window()
                             {Rotation = 180}
                             ):Play()
                         game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                            {ImageColor3 = Color3.fromRGB(180,180,180)}
+                            {ImageColor3 = Color3.fromRGB(0,0,255)}
                             ):Play()
                         
                     else
@@ -1097,7 +1097,7 @@ function Blacklib:Window()
                     
                     ItemList.Name = "ItemList"
                     ItemList.Parent = DropItemScroll
-                    ItemList.BackgroundColor3 = Color3.fromRGB(0,255,0)
+                    ItemList.BackgroundColor3 = Color3.fromRGB(0,0,255)
                     ItemList.BackgroundTransparency = 1.000
                     ItemList.Size = UDim2.new(0, 375, 0, 30)
                     ItemList.AutoButtonColor = false
@@ -1300,7 +1300,7 @@ function Blacklib:Window()
                 
                 SliderInput.Name = "SliderInput"
                 SliderInput.Parent = SliderFrame_2
-                SliderInput.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+                SliderInput.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
                 SliderInput.BackgroundTransparency = 0.7
                 SliderInput.BorderSizePixel = 0
                 SliderInput.Position = UDim2.new(0, 8, 0, 37)
@@ -1319,7 +1319,7 @@ function Blacklib:Window()
             
                 SliderCount.Name = "SliderCount"
                 SliderCount.Parent = SliderButton
-                SliderCount.BackgroundColor3 = Color3.fromRGB(0,200,0)
+                SliderCount.BackgroundColor3 = Color3.fromRGB(0,0,255)
                 SliderCount.BackgroundTransparency = 0.3
                 SliderCount.BorderSizePixel = 0
                 SliderCount.Position = UDim2.new(0,start,0,0)
@@ -1328,7 +1328,7 @@ function Blacklib:Window()
                 Title_2.Name = "Title_2"
                 Title_2.Parent = SliderButton
                 Title_2.AnchorPoint = Vector2.new(0, 0)
-                Title_2.BackgroundColor3 = Color3.fromRGB(0,200,0)
+                Title_2.BackgroundColor3 = Color3.fromRGB(0,0,255)
                 Title_2.AutoButtonColor = false
                 Title_2.BackgroundTransparency = 1.000
                 Title_2.Position = UDim2.new(0,start,0,0)
@@ -1364,7 +1364,7 @@ function Blacklib:Window()
             
                 SliderBox.Name = "SliderBox"
                 SliderBox.Parent = BoxFrame
-                SliderBox.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+                SliderBox.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
                 SliderBox.BackgroundTransparency = 1.000
                 SliderBox.Position = UDim2.new(0, 0, 0, 1.65)
                 SliderBox.Size = UDim2.new(0, 50, 0, 15)
@@ -1656,7 +1656,7 @@ function Blacklib:Window()
             
                 UIStroke.Parent = TextBox
                 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke.Color = Color3.fromRGB(180,180,180)
+                UIStroke.Color = Color3.fromRGB(0,0,255)
                 UIStroke.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke.Thickness = 1
                 UIStroke.Transparency = 0.5
