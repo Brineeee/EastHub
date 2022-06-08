@@ -2,8 +2,7 @@ game.StarterGui:SetCore("SendNotification",  {
  Title = "Notification";
  Text = "Script By xScriptBGs | Join our Discord!";
  Duration = 5;
- Button1 = "";
- Button2 = "Button2 text";
+ Button1 = "Okay!";
  Callback = uilib;
 })
 
