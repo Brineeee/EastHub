@@ -1,0 +1,98 @@
+local Library = {}
+
+do
+local Eas = game:GetService("CoreGui"):FindFirstChild("East")
+	if Eas then Eas:Destroy()
+  end
+end
+
+function Library:New(Title)
+	
+	local ScreenGui = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local Frame_2 = Instance.new("Frame")
+	local UIListLayout = Instance.new("UIListLayout")
+    local Category = Instance.new("ScrollingFrame")
+	local TextLabel = Instance.new("TextLabel")
+
+    
+    ScreenGui.Name = "East" 
+	ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ScreenGui.ResetOnSpawn = false
+
+	Frame.Parent = ScreenGui
+	Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	Frame.Position = UDim2.new(0.05382213, 0, 0.274487466, 0)
+	Frame.Size = _G.Library_Screen
+
+	Frame_2.Parent = Frame
+	Frame_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Frame_2.BorderSizePixel = 0
+	Frame_2.Position = UDim2.new(0.0624024495, 0, 0.145615742, 0)
+	Frame_2.Size = UDim2.new(0, 347, 0, 280)
+
+	UIListLayout.Parent = Frame_2
+	UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0, 10)
+
+	TextLabel.Parent = Frame
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.LayoutOrder = 5
+	TextLabel.Position = UDim2.new(0.252442604, 0, 0.02205408, 0)
+	TextLabel.Size = _G.Library_Size
+	TextLabel.ZIndex = 2
+	TextLabel.Font = Enum.Font.GothamBold
+	TextLabel.Text = Title
+	TextLabel.TextColor3 = Color3.fromRGB(232, 232, 232)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 14.000
+	TextLabel.TextWrapped = true
+
+	local function MVMBOL_fake_script()
+		local script = Instance.new('LocalScript', Frame)
+
+		script.Parent.Active = true
+		script.Parent.Draggable = true
+	end
+	coroutine.wrap(MVMBOL_fake_script)()
+	
+	Home = {} 
+	
+	function Home:Button(Name,Call)
+		
+		local TextButton = Instance.new("TextButton")
+		
+		TextButton.Parent = Frame_2
+		TextButton.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+		TextButton.BorderSizePixel = 0
+		TextButton.Size = UDim2.new(0.9, 40, 0, 40) 
+		TextButton.Font = Enum.Font.SourceSansBold
+		TextButton.Text = Name.. " ❎" 
+		TextButton.TextColor3 = Color3.fromRGB(235, 235, 235)
+		TextButton.TextScaled = true
+		TextButton.TextSize = 14.000
+		TextButton.TextWrapped = true
+
+toggle = false 		
+		TextButton.MouseButton1Click:Connect(function()
+	
+	if toggle == true then 
+		toggle = false 
+	else
+		toggle = true
+		end
+	if toggle == true then 
+		TextButton.Text = Name.. " ✅" 
+		pcall(Call)
+	end
+	if toggle == false then 
+		TextButton.Text = Name.. " ❎" 
+		pcall(Call)
+	end
+		end) 
+	end
+	return Home
+end
+return Library
