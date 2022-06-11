@@ -1365,10 +1365,6 @@ end
 
 Farm_Level:Label("- Other Farm -")
 
-local SelWeapon = Farm_Level:Dropdown("Select Weapon",Wapon,function(Value)
-    MonsterWeapon = Value
-end)
-
 Farm_Level:Dropdown("Select Monster", tableMon, function(vu)
 	SelectMonster = vu
 end)
@@ -1413,10 +1409,6 @@ end
 
 local BossName = Farm_Level:Dropdown("Select Boss", Boss, function(Value)
     SelectBoss = Value
-end)
-
-local BossWeapon = Farm_Level:Dropdown("Select Weapon",Wapon,function(Value)
-    SelectWeaponBoss = Value
 end)
 
 Farm_Level:Label("( to refresh you need to rejoin or hop )")
@@ -1507,10 +1499,6 @@ Farm_Level3:Label("- Mastery -")
 if WeaponMastery == nil then
     WeaponMastery = ""
 end
-
-local SelectWeaponMas = Farm_Level3:Dropdown("Select Weapon",Wapon,function(Value)
-    SelectToolWeapon = Value
-end)
 
 Farm_Level3:Toggle("Auto Farm Mastery Devil Fruit", function(vu)
 		FarmMasteryFruit = vu
@@ -2459,33 +2447,33 @@ end)
 -----------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------
 
+local Teleport = win:CreateTab("Sea Teleport")
 local Teleport_2 = win:CreateTab("Teleport")
-
 -----------------------------------------------------------------------------------
 if First_Sea then
     
-    Teleport_2:Button("Teleport To Second Sea", function()
+    Teleport:Button("Teleport To Second Sea", function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
     end)
-    Teleport_2:Button("Teleport To Third Sea", function()
+    Teleport:Button("Teleport To Third Sea", function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
     end)
     
 elseif Second_Sea then
     
-    Teleport_2:Button("Teleport To First Sea", function()
+    Teleport:Button("Teleport To First Sea", function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
     end)
-	Teleport_2:Button("Teleport To Third Sea", function()
+	Teleport:Button("Teleport To Third Sea", function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
 	end)
 	
 elseif Third_Sea then
     
-    Teleport_2:Button("Teleport To First Sea", function()
+    Teleport:Button("Teleport To First Sea", function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
     end)
-	Teleport_2:Button("Teleport To Second Sea", function()
+	Teleport:Button("Teleport To Second Sea", function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
 	end)
 end
