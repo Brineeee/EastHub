@@ -892,7 +892,7 @@ function Blacklib:Window()
                         ImageButton.ImageRectOffset = Vector2.new(940, 784)
                     end
                     toggle = not toggle
-                    pcall(callback, toggle)
+                    callback(toggle) 
                 end)
             end
             -- End Toggle --
