@@ -784,6 +784,7 @@ function Blacklib:Window()
             
             -- Toggled --
             function ItemHand:Toggle(TogInfo, default, callback)
+                callback = callback or function() end) 
                 local toggle = false
                 local CheckFrame = Instance.new("Frame")
                 local CheckFrame2 = Instance.new("Frame")
