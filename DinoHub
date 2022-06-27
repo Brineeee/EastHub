@@ -283,7 +283,7 @@ function Dino:CreateWindow(text, dinotitle)
                 
                 ButtonHolder.Name = buttontitle or "ButtonHolder"
                 ButtonHolder.Parent = SectionIn
-                ButtonHolder.BackgroundColor3 = Color3.fromRGB(39, 86, 144)
+                ButtonHolder.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
                 ButtonHolder.BorderSizePixel = 0
                 ButtonHolder.Position = UDim2.new(0, 5, 0, 0)
                 ButtonHolder.Size = UDim2.new(0, 350, 0, 25)
