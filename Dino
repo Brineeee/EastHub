@@ -36,7 +36,7 @@ function Dino:CreateWindow(text, dinotitle)
     DinoHubText1.BackgroundColor3 = Color3.fromRGB(0, 255, 155)
     DinoHubText1.BackgroundTransparency = 1.000
     DinoHubText1.BorderSizePixel = 0
-    DinoHubText1.Position = UDim2.new(0, 10, 0, 0)
+    DinoHubText1.Position = UDim2.new(0, 20, 0, 0)
     DinoHubText1.Size = UDim2.new(0, 35, 0, 20)
     DinoHubText1.Font = Enum.Font.GothamSemibold
     DinoHubText1.Text = text
@@ -275,7 +275,7 @@ function Dino:CreateWindow(text, dinotitle)
 
             local DinoElement = {}
 
-            function DinoElement:CreateButton(buttontitle, buttoncallback)
+            function DinoElement:Button(buttontitle, buttoncallback)
                 local ButtonHolder = Instance.new("TextButton")
                 local ButtonHolderUICorner = Instance.new("UICorner")
                 local ButtonHolderUIStroke = Instance.new("UIStroke")
@@ -342,7 +342,7 @@ function Dino:CreateWindow(text, dinotitle)
 
             end
 
-            function DinoElement:CreateToggle(toggletitle, togglecallback)
+            function DinoElement:Toggle(toggletitle, togglecallback)
                 local ToggleHolder = Instance.new("Frame")
                 local ToggleHolderUICorner = Instance.new("UICorner")
                 local ToggleImage = Instance.new("ImageLabel")
@@ -471,7 +471,7 @@ function Dino:CreateWindow(text, dinotitle)
                 
             end
 
-            function DinoElement:CreateSlider(slidertitle, minvalue, maxvalue, callback)
+            function DinoElement:Slider(slidertitle, minvalue, maxvalue, callback)
                 local SliderHolder = Instance.new("Frame")
                 local SliderHolderUICorner = Instance.new("UICorner")
                 local SliderImage = Instance.new("ImageLabel")
@@ -613,7 +613,7 @@ function Dino:CreateWindow(text, dinotitle)
 
             end
 
-            function DinoElement:CreateTextBox(textboxtitle, textboxplaceholdertitle,textboxcallback)
+            function DinoElement:TextBox(textboxtitle, textboxplaceholdertitle,textboxcallback)
                 local TextBoxToggle = Instance.new("Frame")
                 local TextBoxToggleUICorner = Instance.new("UICorner")
                 local TextBoxImage = Instance.new("ImageLabel")
@@ -684,7 +684,7 @@ function Dino:CreateWindow(text, dinotitle)
                 end)
             end
 
-            function DinoElement:CreateDropdown(dropdowntitle, list, dropdowncallback)
+            function DinoElement:Dropdown(dropdowntitle, list, dropdowncallback)
                 list = list or {}
 
                 local DropdownHolder = Instance.new("Frame")
@@ -817,7 +817,7 @@ function Dino:CreateWindow(text, dinotitle)
 
                 local DinoDropdown = {}
 
-                function DinoDropdown:RefreshDropdown(newlist)
+                function DinoDropdown:Refresh(newlist)
                     newlist = newlist or {}
                     for _, alllist in pairs(DropdownIn:GetChildren()) do
                         if alllist:IsA("TextButton") then
@@ -854,7 +854,7 @@ function Dino:CreateWindow(text, dinotitle)
                 return DinoDropdown
             end
 
-            function DinoElement:CreateLabel(labeltitle)
+            function DinoElement:Label(labeltitle)
                 local DropdownHolderTitle = Instance.new("TextLabel")
 
                 --Properties:
@@ -868,13 +868,13 @@ function Dino:CreateWindow(text, dinotitle)
                 DropdownHolderTitle.Size = UDim2.new(0, 350, 0, 15)
                 DropdownHolderTitle.Font = Enum.Font.GothamSemibold
                 DropdownHolderTitle.Text = labeltitle or "This Is A Description"
-                DropdownHolderTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
+                DropdownHolderTitle.TextColor3 = _G.Color
                 DropdownHolderTitle.TextSize = 13.000
                 DropdownHolderTitle.TextXAlignment = Enum.TextXAlignment.Left
 
                 local DinoLabel = {}
 
-                function DinoLabel:ChangeLabel(newlabeltitle)
+                function DinoLabel:Set(newlabeltitle)
                     DropdownHolderTitle.Text = newlabeltitle
                 end
 
